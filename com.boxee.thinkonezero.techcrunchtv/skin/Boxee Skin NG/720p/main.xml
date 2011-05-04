@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+	<window type="window" id="14001">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<onload lang="python"><![CDATA[
+import tracker
+import functions
+
+config = mc.GetApp().GetLocalConfig()
+runtime = config.GetValue("runtime")
+
+if (runtime == "first"):
+	mc.ShowDialogWait()
+	mc.LogDebug("***** TOZ.TCTV *****")
+	mc.LogDebug("Main Window Launch Success")
+	mc.LogDebug("***** TOZ.TCTV *****")
+	items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=e6a55bf6-7a44-43ad-98e2-a7bf0986d165')
+	config.SetValue("show", 'askavc')
+	functions.setMenu()
+	functions.setFocus(items)
+	config.SetValue("runtime", 'notFirst')
+	mc.HideDialogWait()
+else:
+	pass
+	
+mc.ShowDialogWait()
+functions.setMenu()
+mc.HideDialogWait()
+
+myTracker = tracker.Tracker("MO-3541558-10")
+myTracker.trackView("home")
+]]></onload>
+		<defaultcontrol always="false">1200</defaultcontrol>
+		<allowoverlay>yes</allowoverlay>
+		<previouswindow>10482</previouswindow>
+		<controls>
+			<control type="group">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture>tctv_bg.png</texture>
+				</control>
+				<control type="group" id="200">
+					<control type="togglebutton" id="1200">
+						<posx>977</posx>
+						<posy>122</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1201</ondown>
+						<onright></onright>
+						<onup></onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Ask A VC</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=e6a55bf6-7a44-43ad-98e2-a7bf0986d165')
+config.Reset("show")
+config.SetValue("show", 'askavc')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1201">
+						<posx>977</posx>
+						<posy>170</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1202</ondown>
+						<onright></onright>
+						<onup>1200</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>TC Cribs</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=61b33452-b742-4a06-8dba-0e6ff3fe8733')
+config.Reset("show")
+config.SetValue("show", 'tccribs')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1202">
+						<posx>977</posx>
+						<posy>218</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1203</ondown>
+						<onright></onright>
+						<onup>1201</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Fly or Die</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=b7186ecb-8659-4dd5-ab6d-6f3841f02312')
+config.Reset("show")
+config.SetValue("show", 'flyordie')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1203">
+						<posx>977</posx>
+						<posy>266</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1204</ondown>
+						<onright></onright>
+						<onup>1202</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Founder Stories</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=c9195f43-8511-4c2c-97a4-13fd2de43a66')
+config.Reset("show")
+config.SetValue("show", 'founderstories')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1204">
+						<posx>977</posx>
+						<posy>314</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1205</ondown>
+						<onright></onright>
+						<onup>1203</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Gillmor Gang</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=0d1aa790-282a-4cb6-86dd-fb33f5b4ecd6')
+config.Reset("show")
+config.SetValue("show", 'gillmorgang')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1205">
+						<posx>977</posx>
+						<posy>362</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1206</ondown>
+						<onright></onright>
+						<onup>1204</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Keen On</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=63e642be-6973-41a0-a17c-771fe22056c1')
+config.Reset("show")
+config.SetValue("show", 'keenon')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1206">
+						<posx>977</posx>
+						<posy>410</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown>1207</ondown>
+						<onright></onright>
+						<onup>1205</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>OMG/JK</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=5717e19a-83fe-4344-a595-df6f19ca6a76')
+config.Reset("show")
+config.SetValue("show", 'omgjk')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1207">
+						<posx>977</posx>
+						<posy>458</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown></ondown>
+						<onright></onright>
+						<onup>1206</onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Speaking Of</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=8be2a46f-e6c8-4238-83f6-90cc97494ad8')
+config.Reset("show")
+config.SetValue("show", 'speakingof')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>
+					<control type="togglebutton" id="1208">
+						<posx>977</posx>
+						<posy>506</posy>
+						<height>33</height>
+						<width>264</width>
+						<ondown></ondown>
+						<onright></onright>
+						<onup></onup>
+						<onleft>100</onleft>
+						<visible>true</visible>
+						<label>Why Is This News</label>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texturefocus>tctv_hover.png</texturefocus>
+						<texturenofocus>tctv_hover.png</texturenofocus>
+						<alttexturefocus>tctv_hover.png</alttexturefocus>
+						<alttexturenofocus>tctv_active.png</alttexturenofocus>
+						<usealttexture>-</usealttexture>
+						<onclick lang="python"><![CDATA[
+mc.ShowDialogWait()
+items = mc.GetDirectory('http://backlot.ooyala.com/syndication/podcast?id=ed910acb-6606-47e8-9675-2288e8b3648a')
+config.Reset("show")
+config.SetValue("show", 'whyisthisnews')
+functions.setMenu()
+functions.setFocus(items)
+mc.HideDialogWait()
+]]></onclick>	
+					</control>					
+				</control>
+				<control type="panel" id="100">
+					<onup></onup>
+					<ondown></ondown>
+					<onleft></onleft>
+					<onright>200</onright>
+					<posx>10</posx>
+					<posy>121</posy>
+					<width>940</width>
+					<height>528</height>
+					<visible>!Container(100).IsEmpty</visible>
+					<pagecontrol></pagecontrol>
+					<scrolltime>100</scrolltime>
+					<preloaditems>4</preloaditems>
+					<orientation>verticle</orientation>
+					<animation effect="fade" start="0" end="100" time="500" condition="!Container(100).IsEmpty">Conditional</animation>
+					<itemlayout width="310" height="179">
+						<control type="group">
+							<posx>10</posx>
+							<posy>10</posy>
+							<control type="image">
+								<width>300</width>
+								<height>169</height>
+								<texture>$INFO[Listitem.Thumb]</texture>
+								<aspectratio>scale</aspectratio>
+							</control>
+							<control type="image">
+								<posy>124</posy>
+								<width>300</width>
+								<height>45</height>
+								<texture>tctv_item_bar.png</texture>
+							</control>
+							<control type="label">
+								<posx>5</posx>
+								<posy>124</posy>
+								<width>300</width>
+								<height>45</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<font>font17</font>
+								<textcolor>white</textcolor>
+								<info>ListItem.Label</info>
+								<wrapmultiline>true</wrapmultiline>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="310" height="179">
+						<control type="group">
+							<posx>10</posx>
+							<posy>10</posy>
+							<control type="image">
+								<width>300</width>
+								<height>169</height>
+								<texture>tctv_border.png</texture>
+								<animation effect="zoom" start="100" end="106" center="auto" time="50" reversible="false" condition="Control.HasFocus(100)">Conditional</animation>
+							</control>							
+							<control type="image">
+								<width>300</width>
+								<height>169</height>
+								<texture>$INFO[Listitem.Thumb]</texture>
+								<aspectratio>scale</aspectratio>
+							</control>
+							<control type="image">
+								<posy>124</posy>
+								<width>300</width>
+								<height>45</height>
+								<texture>tctv_item_bar.png</texture>
+							</control>
+							<control type="label">
+								<posx>5</posx>
+								<posy>124</posy>
+								<width>300</width>
+								<height>45</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<font>font17</font>
+								<textcolor>white</textcolor>
+								<info>ListItem.Label</info>
+								<wrapmultiline>true</wrapmultiline>
+							</control>							
+						</control>
+					</focusedlayout>
+					<content type="directory">
+					</content>
+				</control>
+			</control>
+		</controls>
+	</window>

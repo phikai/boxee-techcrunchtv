@@ -1,0 +1,26 @@
+import mc
+import time
+
+mc.LogDebug("***** TOZ.TCTV *****")
+mc.LogDebug("app start")
+mc.LogDebug("***** TOZ.TCTV *****")
+
+mc.ActivateWindow(14000)
+mc.LogDebug("***** TOZ.TCTV *****")
+mc.LogDebug("splash start")
+mc.LogDebug("***** TOZ.TCTV *****")
+time.sleep(1.5)
+config = mc.GetApp().GetLocalConfig()
+config.ResetAll()
+config.SetValue("runtime", 'first')
+#mc.LogDebug("***** TOZ.TCTV *****")
+#mc.LogDebug("No Close Window")
+#mc.LogDebug("***** TOZ.TCTV *****")
+#mc.CloseWindow()
+#mc.LogDebug("***** TOZ.TCTV *****")
+#mc.LogDebug("Window Closed")
+#mc.LogDebug("***** TOZ.TCTV *****")
+mc.ActivateWindow(14001)
+mc.LogDebug("***** TOZ.TCTV *****")
+mc.LogDebug("main launched")
+mc.LogDebug("***** TOZ.TCTV *****")

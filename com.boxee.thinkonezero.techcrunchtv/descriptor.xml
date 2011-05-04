@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<app>
+	<id>com.boxee.thinkonezero.techcrunchtv</id>
+	<name>TechCrunch TV</name>
+	<version>0.37</version>
+	<description>TechCrunch TV is packed with some of the most recognizable and inspiring faces in tech. The entrepreneurs, the investors, the developers — everyone in fact who is helping to change the world, one start-up at a time.</description>
+	<thumb>http://boxee.thinkonezero.com/techcrunchtv/build/im/thumb_200x200.png</thumb>
+	<repositoryid>com.boxee.thinkonezero</repositoryid>
+	<repository>http://repository.boxee.thinkonezero.com</repository>
+	<media>video</media>
+	<author>Think One Zero</author>
+	<copyright>ThinkOneZero.com</copyright>
+	<email>boxee@thinkonezero.com</email>
+	<type>skin</type>
+	<startWindow>launch</startWindow>
+	<platform>all</platform>
+	<minversion>0.9.23</minversion>
+</app>
