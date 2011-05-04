@@ -27,11 +27,11 @@ the world, one start-up at a time.
 == Install ==
 
 Since these aren't yet in the official repository, you need to 
-add "http://repositroy.boxee.thinkonezero.com&quot; as a 3rd party repository first
+add "http://repositroy.boxee.thinkonezero.com" as a 3rd party repository first
 
 1. Apps
 2. Add Repository (all the way on the bottom in the left pane) 
-3. http://repositroy.boxee.thinkonezero.com
+3. http://repository.boxee.thinkonezero.com
 
 You'll then be able to see all apps in the repository and add them to your apps.
 
