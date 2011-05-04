@@ -1,0 +1,37 @@
++---------------------------------------+
+|            Think One Zero             |
+|     http://boxee.thinkonezero.com     |
+|     boxee[AT]thinkonezero[DOT]com     |
++---------------------------------------+
+
+Github Information
+User: phikai
+Branch:  phikai / boxee-techcrunchtv  
+
+Repository Information:
+URL: http://repository.boxee.thinkonezero.com
+The Think One Zero Repository contains all boxee applications developed
+and supported by Think One Zero.
+
+The apps:
+* ESPN3: http://espn3.com
+* FilmCow: http://filmcow.com
+* Red vs. Blue: http://redvsblue.com
+* TechCrunch TV: http://techcrunch.tv
+
+== About TechCrunch TV App ==
+TechCrunch TV is packed with some of the most recognizable and inspiring faces in tech. The entrepreneurs, the investors, the developers — everyone in fact who is helping to change the world, one start-up at a time.
+
+== Install ==
+
+Since these aren't yet in the official repository, you need to 
+add "http://repositroy.boxee.thinkonezero.com&quot; as a 3rd party repository first
+
+1. Apps
+2. Add Repository (all the way on the bottom in the left pane) 
+3. http://repositroy.boxee.thinkonezero.com
+
+You'll then be able to see all apps in the repository and add them to your apps.
+
+For Support visit here:
+http://forums.boxee.tv/showthread.php?t=20282
